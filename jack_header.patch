@@ -1,0 +1,24 @@
+--- py-jack-0.5.2/setup.py	2013-11-15 04:16:50.000000000 -0600
++++ setup.py.2	2015-04-04 13:27:47.071800125 -0500
+@@ -5,20 +5,8 @@
+ # Test for Jack2
+ #---------------------------------------------------#
+ import os
+-if os.path.exists("/usr/local/include/jack/jack.h"):
+-  path = "/usr/local/include/jack/jack.h"
+-elif os.path.exists("/usr/include/jack/jack.h"):
+-  path = "/usr/include/jack/jack.h"
+-else:
+-  print "You don't seem to have the jack headers installed.\nPlease install them first"
+-  exit(-1)
+ 
+-test = open(path).read()
+-
+-if ("jack_get_version_string" in test):
+-  os.system("patch -f -s -p0 -r build/jack2.rej < ./patches/enable-jack2.diff > /dev/null")
+-else:
+-  os.system("patch -R -f -s -p0 -r build/jack2.rej < ./patches/enable-jack2.diff > /dev/null")
++os.system("patch -f -s -p0 -r build/jack2.rej < ./patches/enable-jack2.diff > /dev/null")
+ #----------------------------------------------------#
+ 
+ 
