@@ -10,9 +10,7 @@ pythonPackages.buildPythonPackage rec {
     patches = ./jack_header.patch;
     
     propagatedBuildInputs = with pythonPackages; [
+      numpy    
       pkgs.jack2
-      numpy
     ];
 }
-
-#md5=4e239927913f65b4752f2c4ff8aad105

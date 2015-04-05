@@ -19,7 +19,7 @@ let
             python27Packages.click
             python27Packages.funcy
             python27Packages.uncertainties
-            python27Packages.scikitlearn            
+            python27Packages.scikitlearn
             (import ./jackTheWrapper.nix)
             (pkgs.texLiveAggregationFun { paths = [
                 pkgs.texLive
@@ -27,7 +27,7 @@ let
                 pkgs.lmodern
                 pkgs.texLiveCMSuper
             ]; })
-            
+
         ];
      };
 }
