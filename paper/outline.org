@@ -1,0 +1,83 @@
+* Goal: Design an alternative drum interface with the following characteristics
+  - Has a "near" 1-1 mapping from interface to a real drum (i.e. its gonna be a circular pad of some sort)
+  - Should be quiet because:
+     - It shouldn't be the device creating noise (could leak into other near by instrumentation)
+     - Roommates don't appreciate 3am drum sessions
+  - Should be able to operate using relatively low cost parts
+
+* Technique for acquiring data
+  - Attach foam damping to drum pad and sense using Piezo Electric contact mics.
+  - From calibration phase (discuss multiple techniques) generate candidate functions from signal to forcing
+      - Physics inspired approach of estimating the the parameters to the green's function (lots of charts and data to go along with it)
+      - Machine Learning approach of using markov chains to generate forcing from response (have yet to get this to actually work)
+  - Advantages:
+       - Damping succeeds in significantly lowering the sound produced by filtering out high frequencies
+       - In addition, damping makes the time constant smaller making echos negligible (kind-of).
+       - Finally, an unintentional consequence of having the waves travel through the foam, is that the wave speed is significantly slower
+           - This means that you can use much lower sampling rates (and cheaper sensors) to do TDOA
+   - Disadvantages:
+       - Unclear what the non-linear affects are and how they are effecting the forcing computed
+           - Because I am not synthesizing right now, its hard to tell if the responses are at all reasonable
+       - Will likely still need fast computers to do synthesis and calibration
+       - Trying to estimate greens function introduces lag
+       - Sampling at a slower rate introduces lag
+
+* Future Work
+   - Try to use a sensor that does not require direct interaction with the foam such as a magnet placed under the drum head (or threaded into the drum head)
+       - This may allow one to ignore some of the weirder effects of the signal traveling through the foam, while still benefiting from damping
+       - In addition, this mitigates issues of the sound wave traveling through the drum enclosure (which has a large wave speed) to the sensor
+    - Attempt to do synthesis with the data produced by this technique
+    - Explore the foam dynamics more and investigate other dampening schemes that behave more linearly (ideally more constrained to 2-d)
+
+
+* Outline
+
+** Introduction
+
+*** Goal
+  - Has a "near" 1-1 mapping from interface to a real drum (i.e. its gonna be a circular pad of some sort)
+
+  - Should be quiet because:
+     - It shouldn't be the device creating noise (could leak into other near by instrumentation)
+     - Roommates don't appreciate 3am drum sessions
+
+  - Should be able to operate using relatively low cost parts
+
+
+** Design of drumpad + instrumentation
+
+*** Introduction of foam
+
+**** Exploit frequency dependent attenuation
+
+**** Slow down waves for TDOA
+
+** Analysis of properties and responses
+
+*** Expected responses
+
+**** Undamped drumhead
+
+**** Damped drumhead
+
+**** Index of refraction and time to reach sensor
+
+*** Measured responses
+
+**** Response of whole system to strike
+
+**** Response of just the foam
+
+**** Possible 
+
+** Calibration Phase
+
+*** Estimation of parameters
+
+*** Blind markov chains
+
+** Issues and potential solution
+
+** Future work
+
+** Conclusion
