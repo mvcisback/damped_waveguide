@@ -20,6 +20,9 @@ Not pictured is the foam in between the drumhead and the sensor. ](img/drum_xray
 
 ## Theory
 
+TODO: redo theory with coulomb damping instead of viscous damping
+TODO: actually, just show that the difference is negligible ish
+
 ### Drum Head Vibrations
 
 > $(\delta_r^2 + \frac{1}{r}\delta_r + \frac{1}{r^2}\delta_{\theta}^2) u = \frac{1}{c^2}\left(
