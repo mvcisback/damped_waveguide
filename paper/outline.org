@@ -1,9 +1,10 @@
 * Goal: Design an alternative drum interface with the following characteristics
   - Has a "near" 1-1 mapping from interface to a real drum (i.e. its gonna be a circular pad of some sort)
   - Should be quiet because:
-     - It shouldn't be the device creating noise (could leak into other near by instrumentation)
-     - Roommates don't appreciate 3am drum sessions
+    - It shouldn't be the device creating noise (could leak into other near by instrumentation)
+    - Roommates don't appreciate 3am drum sessions
   - Should be able to operate using relatively low cost parts
+  - Main idea: Replace air cavity with alternative medium with a slower wave speed.
 
 * Technique for acquiring data
   - Attach foam damping to drum pad and sense using Piezo Electric contact mics.
@@ -38,10 +39,12 @@
   - Has a "near" 1-1 mapping from interface to a real drum (i.e. its gonna be a circular pad of some sort)
 
   - Should be quiet because:
-     - It shouldn't be the device creating noise (could leak into other near by instrumentation)
-     - Roommates don't appreciate 3am drum sessions
+    - It shouldn't be the device creating noise (could leak into other near by instrumentation)
+    - Roommates don't appreciate 3am drum sessions
 
   - Should be able to operate using relatively low cost parts
+
+  - Audio lag below 30ms
 
 
 ** Design of drumpad + instrumentation

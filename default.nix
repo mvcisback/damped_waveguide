@@ -10,6 +10,7 @@ let
             haskellPackages.pandocCiteproc
             python27
             python27Packages.sympy
+            python27Packages.statsModels
             python27Packages.pillow
             python27Packages.ipython
             python27Packages.matplotlib
