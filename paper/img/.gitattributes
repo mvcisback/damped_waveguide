@@ -1,0 +1,10 @@
+drum_side_cartoon.png filter=lfs diff=lfs merge=lfs -text
+drum_xray.jpg filter=lfs diff=lfs merge=lfs -text
+impulse.png filter=lfs diff=lfs merge=lfs -text
+impulse_many.png filter=lfs diff=lfs merge=lfs -text
+impulse_zoomed.png filter=lfs diff=lfs merge=lfs -text
+linear_decay.png filter=lfs diff=lfs merge=lfs -text
+overview.png filter=lfs diff=lfs merge=lfs -text
+spectrum.png filter=lfs diff=lfs merge=lfs -text
+tdoa.png filter=lfs diff=lfs merge=lfs -text
+wave_path.png filter=lfs diff=lfs merge=lfs -text
